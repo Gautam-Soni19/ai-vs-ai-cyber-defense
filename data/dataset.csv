@@ -1,0 +1,42 @@
+text,label
+hello,benign
+login user,benign
+search laptop,benign
+my profile page,benign
+reset password,benign
+buy shoes online,benign
+how are you,benign
+contact support,benign
+username123,benign
+change email address,benign
+book train tickets,benign
+weather in chennai,benign
+open settings page,benign
+submit feedback,benign
+mobile accessories,benign
+show my orders,benign
+update account info,benign
+customer care number,benign
+best budget phone,benign
+track my shipment,benign
+<script>alert(1)</script>,malicious
+<img src=x onerror=alert(1)>,malicious
+<svg onload=alert(1)>,malicious
+<script>confirm(1)</script>,malicious
+<body onload=alert('XSS')>,malicious
+<iframe src='javascript:alert(1)'></iframe>,malicious
+<input onfocus=alert(1) autofocus>,malicious
+<marquee onstart=alert(1)>,malicious
+<details open ontoggle=alert(1)>,malicious
+<a href='javascript:alert(1)'>click</a>,malicious
+' OR 1=1 --,malicious
+admin' --,malicious
+"' UNION SELECT username,password FROM users --",malicious
+' OR 'a'='a,malicious
+"' AND 1=0 UNION SELECT null,null --",malicious
+' OR ''=',malicious
+' OR 1=1#,malicious
+""" OR 1=1 --",malicious
+"' UNION SELECT null, version() --",malicious
+' OR username LIKE '%admin%' --,malicious
+<img/**/src=x/**/onerror=alert(1)>,malicious
